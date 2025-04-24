@@ -6,7 +6,7 @@ install tutorials
   sudo apt-get install -y --no-install-recommends build-essential \
       tcl8.5 tcl8.5-dev tk8.5 tk8.5-dev \
       libxmu-dev libxmu-headers g++-4.8 \
-      libssl-dev
+      libssl-dev libpcap-dev
   ````
 
 2. download and compile source code
