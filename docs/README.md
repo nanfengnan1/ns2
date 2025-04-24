@@ -25,15 +25,7 @@ install tutorials
   
   2.2 compile source code
 
-  at first, please modify linkstate/ls.h code
-
-  ```cpp
-  vim /home/alexan/program/ns2/ns-allinone-2.35/ns-2.35/linkstate/ls.h +137
-
-  void eraseAll() { erase(baseMap::begin(), baseMap::end()); } ==> void eraseAll() { this->erase(baseMap::begin(), baseMap::end()); }
-  ```
- 
-  and then you could build your source code in /home/alexan/program/ns2/ns-allinone-2.35/
+  you could build your source code in /home/alexan/program/ns2/ns-allinone-2.35/
   ```bash
   cd /home/alexan/program/ns2/ns-allinone-2.35/
   export CC=gcc-4.8 CXX=g++-4.8 && ./install
