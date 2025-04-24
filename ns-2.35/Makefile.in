@@ -72,14 +72,14 @@ INCLUDES = \
 	-I./diffusion3/lib/nr -I./diffusion3/ns \
 	-I./diffusion3/filter_core -I./asim/ -I./qs \
 	-I./diffserv -I./satellite \
-	-I./wpan
+	-I./wpan -I./threshold_rsa
 
 
 LIB	= \
 	@V_LIBS@ \
 	@V_LIB_X11@ \
 	@V_LIB@ \
-	-lm @LIBS@
+	-lm -lssl -lcrypto -lotcl @LIBS@ \
 #	-L@libdir@ \
 
 CFLAGS	+= $(CCOPT) $(DEFINE) 
@@ -333,6 +333,7 @@ OBJ_CC = \
 	wpan/p802_15_4sscs.o wpan/p802_15_4timer.o \
 	wpan/p802_15_4trace.o wpan/p802_15_4transac.o \
 	apps/pbc.o \
+	threshold_rsa/threshold_rsa.o \
 	@V_STLOBJ@
 
 
@@ -524,6 +525,7 @@ NS_TCL_LIB = \
 	tcl/lib/ns-srcrt.tcl \
 	tcl/mcast/ns-lms.tcl \
 	tcl/lib/ns-qsnode.tcl \
+	tcl/threshold_rsa/threshold_rsa.tcl \
 	@V_NS_TCL_LIB_STL@
 
 $(GEN_DIR)ns_tcl.cc: $(NS_TCL_LIB)

@@ -538,9 +538,9 @@ if [ -f Makefile ] ; then
 fi
 
 if  [ "${test_cygwin}" = "true" ]; then
-        ./configure --x-libraries=/usr/X11R6/lib --x-includes=/usr/X11R6/include --with-tcl-ver=$TCLVER --with-tk-ver=$TKVER || die "Ns configuration failed! Exiting ...";
+        ./configure --x-libraries=/usr/X11R6/lib --x-includes=/usr/X11R6/include --with-tcl-ver=$TCLVER --with-tk-ver=$TKVER --enable-debug || die "Ns configuration failed! Exiting ...";
 else
-        ./configure --with-otcl=../otcl-$OTCLVER --with-tclcl=../tclcl-$TCLCLVER --with-tcl-ver=$TCLVER --with-tk-ver=$TKVER || die "Ns configuration failed! Exiting ...";
+        ./configure --with-otcl=../otcl-$OTCLVER --with-tclcl=../tclcl-$TCLCLVER --with-tcl-ver=$TCLVER --with-tk-ver=$TKVER --enable-debug || die "Ns configuration failed! Exiting ...";
 fi
 
 if make

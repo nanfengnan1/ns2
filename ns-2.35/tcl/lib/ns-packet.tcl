@@ -69,6 +69,11 @@
 # As you can see, this is also enforced by these header manipulation procs.
 #
 
+add-packet-header ThresholdRSA \
+    "unsigned int type;    \
+     unsigned int sender_id; \
+     unsigned char payload[100];"
+
 PacketHeaderManager set hdrlen_ 0
 
 # XXX Common header should ALWAYS be present

@@ -199,8 +199,10 @@ static const packet_t PT_DCCP_RESET = 71;
         // M-DART packets
 static const packet_t PT_MDART = 72;
 	
+static const packet_t PT_THRESHOLD_RSA = 73;
+
         // insert new packet types here
-static packet_t       PT_NTYPE = 73; // This MUST be the LAST one
+static packet_t       PT_NTYPE = 74; // This MUST be the LAST one
 
 enum packetClass
 {
