@@ -8,6 +8,11 @@ lib
 bin
 include
 
+tclcl-1.20/config.h
+tclcl-1.20/config.status
+zlib-1.2.3/Makefile
+zlib-1.2.3/zconf.h
+
 cweb/ctangle
 cweb/cweave
 cweb/cweave.c
